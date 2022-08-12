@@ -17,3 +17,8 @@ body {
   padding: 15px;
   font-size: 20px;
   }
+#when-where {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
