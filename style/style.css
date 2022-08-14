@@ -47,3 +47,19 @@ body {
   font-weight: bold;
   text-shadow: 5px 10px black;
 }
+#feelsLike {
+  color: #FFF;
+  font-size: 30px;
+  font-weight: bold;
+}
+#conditions {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+}
+#variation {
+  color: #FFF;
+  font-size: 26px;
+  font-weight: bold;
+}
