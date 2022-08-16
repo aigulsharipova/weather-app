@@ -7,6 +7,10 @@ input.addEventListener('keydown', enter);
 
 function enter(e) {
   if(e.keycode === 13) {
-    getInfo()
+    getInfo(input.value);
   }
+}
+
+function getInfo(dat) {
+  fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`)
 }
