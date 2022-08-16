@@ -13,5 +13,10 @@ function enter(e) {
 
 async function getInfo(dat) {
   const res = await fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`)
-  const result = await res.json()
+  const result = await res.json();
+  displayResult();
+}
+
+function displayResult() {
+  
 }
