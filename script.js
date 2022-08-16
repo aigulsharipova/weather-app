@@ -3,21 +3,21 @@ const api = {
   key: "62ec8868273035b80fb16c0e9f6eddeb" }
 
 const input = document.querySelector('#input');
-input.addEventListener('keydown', enter);
+input.addEventListener('keypress', enter);
 
 function enter(e) {
-  if(e.keycode === 13) {
+  if (e.keyCode === 13) {
     getInfo(input.value);
   }
 }
 
-async function getInfo(dat) {
-  const res = await fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`)
+async function getInfo(data) {
+  const res = await fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`);
   const result = await res.json();
   displayResult(result);
 }
 
 function displayResult(result) {
 let city = document.querySelector('#city');
-city.textContent = `${result.name}`;
+city.textContent = `${result.name}`, `${result.sys.country}`;
 }
