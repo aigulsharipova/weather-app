@@ -30,4 +30,7 @@ feelslike.innerHTML = `Feels like: ${Math.round(result.main.feels_like)}<span>°
 
 let varation = document.querySelector('#varation');
 varation.innerHTML = `Min: ${Math.round(result.main.temp_min)}<span>°</span> Max: ${Math.round(result.main.temp_max)}<span>°</span>`;
+
+let conditions = document.querySelector('#conditions');
+conditions.textContent = `${result.weather[0].main}`;
 }
