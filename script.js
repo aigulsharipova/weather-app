@@ -27,4 +27,7 @@ temperature.innerHTML = `${Math.round(result.main.temp)}<span>°</span>`;
 
 let feelslike = document.querySelector('#feelslike');
 feelslike.innerHTML = `Feels like: ${Math.round(result.main.feels_like)}<span>°</span>`;
+
+let varation = document.querySelector('#varation');
+varation.innerHTML = `Min: ${Math.round(result.main.temp_min)}<span>°</span> Max: ${Math.round(result.main.temp_max)}<span>°</span>`;
 }
