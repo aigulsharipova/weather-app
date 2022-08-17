@@ -19,5 +19,7 @@ async function getInfo(data) {
 
 function displayResult(result) {
 let city = document.querySelector('#city');
-city.textContent = `${result.name}`, `${result.sys.country}`;
+city.textContent = `${result.name}, ${result.sys.country}`;
+let temperature = document.querySelector('#temperature');
+temperature.innerHTML = `${Math.round(result.main.temp)}<span>°</span>`;
 }
