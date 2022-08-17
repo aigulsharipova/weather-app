@@ -56,5 +56,5 @@ function getOurDate() {
   let year = myDate.getFullYear();
 
   let showDate = document.querySelector("#date");
-  showDate.textContent = `${day},` + " " + `${todayDate}` + " " + `${month},` + " " + `${year}`
+  showDate.textContent = `${day}` + " " + `${todayDate}` + " " + `${month}` + " " + `${year}` 
 }
