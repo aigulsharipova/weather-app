@@ -14,6 +14,7 @@ function enter(e) {
 async function getInfo(data) {
   const res = await fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`);
   const result = await res.json();
+  console.log(result)
   displayResult(result);
 }
 
@@ -23,4 +24,7 @@ city.textContent = `${result.name}, ${result.sys.country}`;
 
 let temperature = document.querySelector('#temperature');
 temperature.innerHTML = `${Math.round(result.main.temp)}<span>°</span>`;
+
+let feelslike = document.querySelector('#feelslike');
+feelslike.innerHTML = `Feels like: ${Math.round(result.main.feels_like)}<span>°</span>`;
 }
