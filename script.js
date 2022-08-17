@@ -22,6 +22,8 @@ function displayResult(result) {
 let city = document.querySelector('#city');
 city.textContent = `${result.name}, ${result.sys.country}`;
 
+getOurDate();
+
 let temperature = document.querySelector('#temperature');
 temperature.innerHTML = `${Math.round(result.main.temp)}<span>°</span>`;
 
@@ -33,4 +35,26 @@ varation.innerHTML = `Min: ${Math.round(result.main.temp_min)}<span>°</span> Ma
 
 let conditions = document.querySelector('#conditions');
 conditions.textContent = `${result.weather[0].main}`;
+}
+
+function getOurDate() {
+  //1 Today date
+  const myDate = new Date();
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+  //2 Day
+  let day = days[myDate.getDay()];
+
+  //3 Date
+  let todayDate = myDate.getDate();
+
+  //4 Month
+  let month = months[myDate.getMonth()];
+
+//5 Year
+  let year = myDate.getFullYear();
+
+  let showDate = document.querySelector("#date");
+  showDate.textContent = `${day},` + " " + `${todayDate}` + " " + `${month},` + " " + `${year}`
 }
